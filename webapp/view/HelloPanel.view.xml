@@ -4,6 +4,10 @@
     xmlns:mvc="sap.ui.core.mvc">
     <Panel headerText="{i18n>panelTitle}">
         <content>
+            <Button 
+                id="dialogButton"
+                text="{i18n>openDialogButtonText}"
+                press=".onOpenDialog" />
             <Button
                 text="{i18n>showHelloButtonText}"
                 press=".onShowHello" />

@@ -14,6 +14,17 @@ sap.ui.define(
         // show a native JavaScript alert
         MessageToast.show(sMsg);
       },
+      onOpenDialog() {
+        // create dialog lazily
+        this.pDialog ??= this.loadFragment({
+          name: "ui5.walkthrough.view.HelloDialog"
+        });
+
+        this.pDialog.then((oDialog) => oDialog.open());
+      },
+      onCloseDialog() {
+        this.byId("helloDialog").close();
+      }
     });
   }
 );
