@@ -8,12 +8,7 @@ sap.ui.define(
     "use strict";
     return UIComponent.extend("ui5.walkthrough.Component", {
       metadata: {
-        rootView: {
-          viewName: "ui5.walkthrough.view.App",
-          type: "XML",
-          async: true,
-          id: "app",
-        },
+        manifest: "json"
       },
       init() {
         // call init function of parent UI Component
@@ -29,12 +24,6 @@ sap.ui.define(
         const oModel = new JSONModel(oData);
         this.setModel(oModel);
 
-        // Example of a  Resource bundle type model
-        // Set language
-        const i18nModel = new ResourceModel({
-          bundleName: "ui5.walkthrough.i18n.i18n",
-        });
-        this.setModel(i18nModel, "i18n");
       },
     });
   }
